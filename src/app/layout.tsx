@@ -1,11 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Roboto, Raleway } from "next/font/google";
 import "./globals.css";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
+const roboto = Roboto({
+  display: "swap",
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700'],
+  variable: "--font-roboto"
+})
+
+const raleway = Raleway({
+  display : 'swap',
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700'],
+  variable: "--font-raleway"
+})
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -25,9 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${raleway.className} ${geistMono.variable} ${roboto.variable} antialiased`}
       >
+        <Navigation/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
