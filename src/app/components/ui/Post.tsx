@@ -5,7 +5,6 @@ interface PropsTypes {
   heading: string;
   date: string;
   title: string;
-  author: string;
   src: string;
   alt: string;
   desc1: string;
@@ -18,7 +17,6 @@ const Click = ({
   heading,
   date,
   title,
-  author,
   quote,
   src,
   alt,

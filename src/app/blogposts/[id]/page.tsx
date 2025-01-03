@@ -21,7 +21,7 @@ export function ProductPage({ params }: Params) {
     <div className="pt-[57px] pb-[173px] px-4 sm:px-[25px] md:px-[120px]  2xl:px-60 3xl:px-[265px] xl:px-[150px] lg:px-[100px]">
       {/* {Prods.map((blog) => ( */}
         <div key={blog.id}>
-          <Post desc3={blog.desc3} desc2={blog.desc2} quote={blog.quote} alt={blog.alt} desc1={blog.desc1} src={blog.src} title={blog.title} date={blog.date} heading={blog.heading} author={blog.author} />
+          <Post desc3={blog.desc3} desc2={blog.desc2} quote={blog.quote} alt={blog.alt} desc1={blog.desc1} src={blog.src} title={blog.title} date={blog.date} heading={blog.heading} />
         </div>
       {/* ))} */}
       <CommentSection/>
