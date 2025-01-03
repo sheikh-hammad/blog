@@ -10,18 +10,17 @@ export async function generateStaticParams() {
 }
 
 export function ProductPage({ params }: Params) {
-  const blog = Prods.find((prod) => prod.id === parseInt(params.id));
-  console.log({ blog });
+  const product = Prods.find((product) => product.id === parseInt(params.id));
 
-  if (!blog) {
+  if (!product) {
     return <p>not found</p>;
   }
 
   return (
     <div className="pt-[57px] pb-[173px] px-4 sm:px-[25px] md:px-[120px]  2xl:px-60 3xl:px-[265px] xl:px-[150px] lg:px-[100px]">
       {/* {Prods.map((blog) => ( */}
-        <div key={blog.id}>
-          <Post desc3={blog.desc3} desc2={blog.desc2} quote={blog.quote} alt={blog.alt} desc1={blog.desc1} src={blog.src} title={blog.title} date={blog.date} heading={blog.heading} />
+        <div key={params.id}>
+          <Post desc3={product.desc3} desc2={product.desc2} quote={product.quote} alt={product.alt} desc1={product.desc1} src={product.src} title={product.title} date={product.date} heading={product.heading} />
         </div>
       {/* ))} */}
       <CommentSection/>
